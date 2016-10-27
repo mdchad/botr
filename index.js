@@ -5,7 +5,20 @@ var bot = new Bottr.Bot()
 bot.use(new BottrApp())
 
 bot.on('message_received', function (message, session) {
-  session.send('Hello World')
+
+  if (message === 'hello') {
+    session.send('Hello World')
+
+  }
+
+  else if (messsage === 'how are you') {
+    session.send('im good')
+  }
+
+  else {
+    session.send('nice talking to you')
+  }
+
 })
 
 bot.listen()
